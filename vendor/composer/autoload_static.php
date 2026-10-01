@@ -4,154 +4,161 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit8de789a2c20183752e72c14c93a923cf
+class ComposerStaticInitf2ea575c781832c7edba4dca79d6cafd
 {
-    public static $files = array (
-        '3937806105cc8e221b8fa8db5b70d2f2' => __DIR__ . '/..' . '/wp-cli/mustangostang-spyc/includes/functions.php',
-        'be01b9b16925dcb22165c40b46681ac6' => __DIR__ . '/..' . '/wp-cli/php-cli-tools/lib/cli/cli.php',
-        'ffb465a494c3101218c4417180c2c9a2' => __DIR__ . '/..' . '/wp-cli/i18n-command/i18n-command.php',
-    );
-
     public static $prefixLengthsPsr4 = array (
-        'e' => 
+        'C' => 
         array (
-            'eftec\\bladeone\\' => 15,
-        ),
-        'W' => 
-        array (
-            'WP_CLI\\I18n\\' => 12,
-        ),
-        'S' => 
-        array (
-            'Symfony\\Component\\Finder\\' => 25,
-        ),
-        'P' => 
-        array (
-            'Peast\\' => 6,
-        ),
-        'M' => 
-        array (
-            'Mustangostang\\' => 14,
-        ),
-        'G' => 
-        array (
-            'Gettext\\Languages\\' => 18,
-            'Gettext\\' => 8,
-        ),
-        'D' => 
-        array (
-            'Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\' => 55,
+            'Carbon_Fields\\' => 14,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'eftec\\bladeone\\' => 
+        'Carbon_Fields\\' => 
         array (
-            0 => __DIR__ . '/..' . '/eftec/bladeone/lib',
-        ),
-        'WP_CLI\\I18n\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/wp-cli/i18n-command/src',
-        ),
-        'Symfony\\Component\\Finder\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/finder',
-        ),
-        'Peast\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/mck89/peast/lib/Peast',
-        ),
-        'Mustangostang\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/wp-cli/mustangostang-spyc/src',
-        ),
-        'Gettext\\Languages\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/gettext/languages/src',
-        ),
-        'Gettext\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/gettext/gettext/src',
-        ),
-        'Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/dealerdirect/phpcodesniffer-composer-installer/src',
-        ),
-    );
-
-    public static $prefixesPsr0 = array (
-        'c' => 
-        array (
-            'cli' => 
-            array (
-                0 => __DIR__ . '/..' . '/wp-cli/php-cli-tools/lib',
-            ),
-        ),
-        'W' => 
-        array (
-            'WP_CLI\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/wp-cli/wp-cli/php',
-            ),
-        ),
-        'M' => 
-        array (
-            'Mustache' => 
-            array (
-                0 => __DIR__ . '/..' . '/wp-cli/mustache/src',
-            ),
+            0 => __DIR__ . '/..' . '/htmlburger/carbon-fields/core',
         ),
     );
 
     public static $classMap = array (
+        'Carbon_Fields\\Block' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Block.php',
+        'Carbon_Fields\\Carbon_Fields' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Carbon_Fields.php',
+        'Carbon_Fields\\Container' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container.php',
+        'Carbon_Fields\\Container\\Block_Container' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Block_Container.php',
+        'Carbon_Fields\\Container\\Broken_Container' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Broken_Container.php',
+        'Carbon_Fields\\Container\\Comment_Meta_Container' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Comment_Meta_Container.php',
+        'Carbon_Fields\\Container\\Condition\\Blog_ID_Condition' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Condition/Blog_ID_Condition.php',
+        'Carbon_Fields\\Container\\Condition\\Boolean_Condition' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Condition/Boolean_Condition.php',
+        'Carbon_Fields\\Container\\Condition\\Comparer\\Any_Contain_Comparer' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Condition/Comparer/Any_Contain_Comparer.php',
+        'Carbon_Fields\\Container\\Condition\\Comparer\\Any_Equality_Comparer' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Condition/Comparer/Any_Equality_Comparer.php',
+        'Carbon_Fields\\Container\\Condition\\Comparer\\Comparer' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Condition/Comparer/Comparer.php',
+        'Carbon_Fields\\Container\\Condition\\Comparer\\Contain_Comparer' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Condition/Comparer/Contain_Comparer.php',
+        'Carbon_Fields\\Container\\Condition\\Comparer\\Custom_Comparer' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Condition/Comparer/Custom_Comparer.php',
+        'Carbon_Fields\\Container\\Condition\\Comparer\\Equality_Comparer' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Condition/Comparer/Equality_Comparer.php',
+        'Carbon_Fields\\Container\\Condition\\Comparer\\Scalar_Comparer' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Condition/Comparer/Scalar_Comparer.php',
+        'Carbon_Fields\\Container\\Condition\\Condition' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Condition/Condition.php',
+        'Carbon_Fields\\Container\\Condition\\Current_User_Capability_Condition' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Condition/Current_User_Capability_Condition.php',
+        'Carbon_Fields\\Container\\Condition\\Current_User_ID_Condition' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Condition/Current_User_ID_Condition.php',
+        'Carbon_Fields\\Container\\Condition\\Current_User_Role_Condition' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Condition/Current_User_Role_Condition.php',
+        'Carbon_Fields\\Container\\Condition\\Factory' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Condition/Factory.php',
+        'Carbon_Fields\\Container\\Condition\\Post_Ancestor_ID_Condition' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Condition/Post_Ancestor_ID_Condition.php',
+        'Carbon_Fields\\Container\\Condition\\Post_Format_Condition' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Condition/Post_Format_Condition.php',
+        'Carbon_Fields\\Container\\Condition\\Post_ID_Condition' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Condition/Post_ID_Condition.php',
+        'Carbon_Fields\\Container\\Condition\\Post_Level_Condition' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Condition/Post_Level_Condition.php',
+        'Carbon_Fields\\Container\\Condition\\Post_Parent_ID_Condition' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Condition/Post_Parent_ID_Condition.php',
+        'Carbon_Fields\\Container\\Condition\\Post_Template_Condition' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Condition/Post_Template_Condition.php',
+        'Carbon_Fields\\Container\\Condition\\Post_Term_Condition' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Condition/Post_Term_Condition.php',
+        'Carbon_Fields\\Container\\Condition\\Post_Type_Condition' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Condition/Post_Type_Condition.php',
+        'Carbon_Fields\\Container\\Condition\\Term_Ancestor_Condition' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Condition/Term_Ancestor_Condition.php',
+        'Carbon_Fields\\Container\\Condition\\Term_Condition' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Condition/Term_Condition.php',
+        'Carbon_Fields\\Container\\Condition\\Term_Level_Condition' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Condition/Term_Level_Condition.php',
+        'Carbon_Fields\\Container\\Condition\\Term_Parent_Condition' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Condition/Term_Parent_Condition.php',
+        'Carbon_Fields\\Container\\Condition\\Term_Taxonomy_Condition' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Condition/Term_Taxonomy_Condition.php',
+        'Carbon_Fields\\Container\\Condition\\User_Capability_Condition' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Condition/User_Capability_Condition.php',
+        'Carbon_Fields\\Container\\Condition\\User_ID_Condition' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Condition/User_ID_Condition.php',
+        'Carbon_Fields\\Container\\Condition\\User_Role_Condition' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Condition/User_Role_Condition.php',
+        'Carbon_Fields\\Container\\Container' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Container.php',
+        'Carbon_Fields\\Container\\Fulfillable\\Fulfillable' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Fulfillable/Fulfillable.php',
+        'Carbon_Fields\\Container\\Fulfillable\\Fulfillable_Collection' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Fulfillable/Fulfillable_Collection.php',
+        'Carbon_Fields\\Container\\Fulfillable\\Translator\\Array_Translator' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Fulfillable/Translator/Array_Translator.php',
+        'Carbon_Fields\\Container\\Fulfillable\\Translator\\Json_Translator' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Fulfillable/Translator/Json_Translator.php',
+        'Carbon_Fields\\Container\\Fulfillable\\Translator\\Translator' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Fulfillable/Translator/Translator.php',
+        'Carbon_Fields\\Container\\Nav_Menu_Item_Container' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Nav_Menu_Item_Container.php',
+        'Carbon_Fields\\Container\\Network_Container' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Network_Container.php',
+        'Carbon_Fields\\Container\\Post_Meta_Container' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Post_Meta_Container.php',
+        'Carbon_Fields\\Container\\Repository' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Repository.php',
+        'Carbon_Fields\\Container\\Term_Meta_Container' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Term_Meta_Container.php',
+        'Carbon_Fields\\Container\\Theme_Options_Container' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Theme_Options_Container.php',
+        'Carbon_Fields\\Container\\User_Meta_Container' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/User_Meta_Container.php',
+        'Carbon_Fields\\Container\\Widget_Container' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container/Widget_Container.php',
+        'Carbon_Fields\\Datastore\\Comment_Meta_Datastore' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Datastore/Comment_Meta_Datastore.php',
+        'Carbon_Fields\\Datastore\\Datastore' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Datastore/Datastore.php',
+        'Carbon_Fields\\Datastore\\Datastore_Holder_Interface' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Datastore/Datastore_Holder_Interface.php',
+        'Carbon_Fields\\Datastore\\Datastore_Interface' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Datastore/Datastore_Interface.php',
+        'Carbon_Fields\\Datastore\\Empty_Datastore' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Datastore/Empty_Datastore.php',
+        'Carbon_Fields\\Datastore\\Key_Value_Datastore' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Datastore/Key_Value_Datastore.php',
+        'Carbon_Fields\\Datastore\\Meta_Datastore' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Datastore/Meta_Datastore.php',
+        'Carbon_Fields\\Datastore\\Nav_Menu_Item_Datastore' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Datastore/Nav_Menu_Item_Datastore.php',
+        'Carbon_Fields\\Datastore\\Network_Datastore' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Datastore/Network_Datastore.php',
+        'Carbon_Fields\\Datastore\\Post_Meta_Datastore' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Datastore/Post_Meta_Datastore.php',
+        'Carbon_Fields\\Datastore\\Term_Meta_Datastore' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Datastore/Term_Meta_Datastore.php',
+        'Carbon_Fields\\Datastore\\Theme_Options_Datastore' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Datastore/Theme_Options_Datastore.php',
+        'Carbon_Fields\\Datastore\\User_Meta_Datastore' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Datastore/User_Meta_Datastore.php',
+        'Carbon_Fields\\Datastore\\Widget_Datastore' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Datastore/Widget_Datastore.php',
+        'Carbon_Fields\\Event\\Emitter' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Event/Emitter.php',
+        'Carbon_Fields\\Event\\Listener' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Event/Listener.php',
+        'Carbon_Fields\\Event\\PersistentListener' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Event/PersistentListener.php',
+        'Carbon_Fields\\Event\\SingleEventListener' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Event/SingleEventListener.php',
+        'Carbon_Fields\\Exception\\Incorrect_Syntax_Exception' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Exception/Incorrect_Syntax_Exception.php',
+        'Carbon_Fields\\Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field.php',
+        'Carbon_Fields\\Field\\Association_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Association_Field.php',
+        'Carbon_Fields\\Field\\Block_Preview_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Block_Preview_Field.php',
+        'Carbon_Fields\\Field\\Broken_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Broken_Field.php',
+        'Carbon_Fields\\Field\\Checkbox_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Checkbox_Field.php',
+        'Carbon_Fields\\Field\\Color_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Color_Field.php',
+        'Carbon_Fields\\Field\\Complex_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Complex_Field.php',
+        'Carbon_Fields\\Field\\Date_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Date_Field.php',
+        'Carbon_Fields\\Field\\Date_Time_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Date_Time_Field.php',
+        'Carbon_Fields\\Field\\Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Field.php',
+        'Carbon_Fields\\Field\\File_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/File_Field.php',
+        'Carbon_Fields\\Field\\Footer_Scripts_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Footer_Scripts_Field.php',
+        'Carbon_Fields\\Field\\Gravity_Form_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Gravity_Form_Field.php',
+        'Carbon_Fields\\Field\\Group_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Group_Field.php',
+        'Carbon_Fields\\Field\\Header_Scripts_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Header_Scripts_Field.php',
+        'Carbon_Fields\\Field\\Hidden_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Hidden_Field.php',
+        'Carbon_Fields\\Field\\Html_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Html_Field.php',
+        'Carbon_Fields\\Field\\Image_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Image_Field.php',
+        'Carbon_Fields\\Field\\Map_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Map_Field.php',
+        'Carbon_Fields\\Field\\Media_Gallery_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Media_Gallery_Field.php',
+        'Carbon_Fields\\Field\\Multiselect_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Multiselect_Field.php',
+        'Carbon_Fields\\Field\\Oembed_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Oembed_Field.php',
+        'Carbon_Fields\\Field\\Predefined_Options_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Predefined_Options_Field.php',
+        'Carbon_Fields\\Field\\Radio_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Radio_Field.php',
+        'Carbon_Fields\\Field\\Radio_Image_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Radio_Image_Field.php',
+        'Carbon_Fields\\Field\\Rich_Text_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Rich_Text_Field.php',
+        'Carbon_Fields\\Field\\Scripts_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Scripts_Field.php',
+        'Carbon_Fields\\Field\\Select_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Select_Field.php',
+        'Carbon_Fields\\Field\\Separator_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Separator_Field.php',
+        'Carbon_Fields\\Field\\Set_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Set_Field.php',
+        'Carbon_Fields\\Field\\Sidebar_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Sidebar_Field.php',
+        'Carbon_Fields\\Field\\Text_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Text_Field.php',
+        'Carbon_Fields\\Field\\Textarea_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Textarea_Field.php',
+        'Carbon_Fields\\Field\\Time_Field' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Field/Time_Field.php',
+        'Carbon_Fields\\Helper\\Color' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Helper/Color.php',
+        'Carbon_Fields\\Helper\\Delimiter' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Helper/Delimiter.php',
+        'Carbon_Fields\\Helper\\Helper' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Helper/Helper.php',
+        'Carbon_Fields\\Libraries\\Sidebar_Manager\\Sidebar_Manager' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Libraries/Sidebar_Manager/Sidebar_Manager.php',
+        'Carbon_Fields\\Loader\\Loader' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Loader/Loader.php',
+        'Carbon_Fields\\Pimple\\Container' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Pimple/Container.php',
+        'Carbon_Fields\\Pimple\\Exception\\ExpectedInvokableException' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Pimple/Exception/ExpectedInvokableException.php',
+        'Carbon_Fields\\Pimple\\Exception\\FrozenServiceException' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Pimple/Exception/FrozenServiceException.php',
+        'Carbon_Fields\\Pimple\\Exception\\InvalidServiceIdentifierException' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Pimple/Exception/InvalidServiceIdentifierException.php',
+        'Carbon_Fields\\Pimple\\Exception\\UnknownIdentifierException' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Pimple/Exception/UnknownIdentifierException.php',
+        'Carbon_Fields\\Pimple\\ServiceIterator' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Pimple/ServiceIterator.php',
+        'Carbon_Fields\\Pimple\\ServiceProviderInterface' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Pimple/ServiceProviderInterface.php',
+        'Carbon_Fields\\Provider\\Container_Condition_Provider' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Provider/Container_Condition_Provider.php',
+        'Carbon_Fields\\REST_API\\Decorator' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/REST_API/Decorator.php',
+        'Carbon_Fields\\REST_API\\Router' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/REST_API/Router.php',
+        'Carbon_Fields\\Service\\Legacy_Storage_Service_v_1_5' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Service/Legacy_Storage_Service_v_1_5.php',
+        'Carbon_Fields\\Service\\Meta_Query_Service' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Service/Meta_Query_Service.php',
+        'Carbon_Fields\\Service\\REST_API_Service' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Service/REST_API_Service.php',
+        'Carbon_Fields\\Service\\Revisions_Service' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Service/Revisions_Service.php',
+        'Carbon_Fields\\Service\\Service' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Service/Service.php',
+        'Carbon_Fields\\Toolset\\Key_Toolset' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Toolset/Key_Toolset.php',
+        'Carbon_Fields\\Toolset\\WP_Toolset' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Toolset/WP_Toolset.php',
+        'Carbon_Fields\\Value_Set\\Value_Set' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Value_Set/Value_Set.php',
+        'Carbon_Fields\\Walker\\Nav_Menu_Item_Edit_Walker' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Walker/Nav_Menu_Item_Edit_Walker.php',
+        'Carbon_Fields\\Widget' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Widget.php',
+        'Carbon_Fields\\Widget\\Widget' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Widget/Widget.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'JakubOnderka\\PhpParallelLint\\Application' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Application.php',
-        'JakubOnderka\\PhpParallelLint\\ArrayIterator' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Settings.php',
-        'JakubOnderka\\PhpParallelLint\\Blame' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Error.php',
-        'JakubOnderka\\PhpParallelLint\\CheckstyleOutput' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Output.php',
-        'JakubOnderka\\PhpParallelLint\\ConsoleWriter' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Output.php',
-        'JakubOnderka\\PhpParallelLint\\Contracts\\SyntaxErrorCallback' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Contracts/SyntaxErrorCallback.php',
-        'JakubOnderka\\PhpParallelLint\\Error' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Error.php',
-        'JakubOnderka\\PhpParallelLint\\ErrorFormatter' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/ErrorFormatter.php',
-        'JakubOnderka\\PhpParallelLint\\Exception' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/exceptions.php',
-        'JakubOnderka\\PhpParallelLint\\FileWriter' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Output.php',
-        'JakubOnderka\\PhpParallelLint\\GitLabOutput' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Output.php',
-        'JakubOnderka\\PhpParallelLint\\IWriter' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Output.php',
-        'JakubOnderka\\PhpParallelLint\\InvalidArgumentException' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/exceptions.php',
-        'JakubOnderka\\PhpParallelLint\\JsonOutput' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Output.php',
-        'JakubOnderka\\PhpParallelLint\\Manager' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Manager.php',
-        'JakubOnderka\\PhpParallelLint\\MultipleWriter' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Output.php',
-        'JakubOnderka\\PhpParallelLint\\NotExistsClassException' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/exceptions.php',
-        'JakubOnderka\\PhpParallelLint\\NotExistsPathException' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/exceptions.php',
-        'JakubOnderka\\PhpParallelLint\\NotImplementCallbackException' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/exceptions.php',
-        'JakubOnderka\\PhpParallelLint\\NullWriter' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Output.php',
-        'JakubOnderka\\PhpParallelLint\\Output' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Output.php',
-        'JakubOnderka\\PhpParallelLint\\ParallelLint' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/ParallelLint.php',
-        'JakubOnderka\\PhpParallelLint\\Process\\GitBlameProcess' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Process/GitBlameProcess.php',
-        'JakubOnderka\\PhpParallelLint\\Process\\LintProcess' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Process/LintProcess.php',
-        'JakubOnderka\\PhpParallelLint\\Process\\PhpExecutable' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Process/PhpExecutable.php',
-        'JakubOnderka\\PhpParallelLint\\Process\\PhpProcess' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Process/PhpProcess.php',
-        'JakubOnderka\\PhpParallelLint\\Process\\Process' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Process/Process.php',
-        'JakubOnderka\\PhpParallelLint\\Process\\SkipLintProcess' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Process/SkipLintProcess.php',
-        'JakubOnderka\\PhpParallelLint\\RecursiveDirectoryFilterIterator' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Manager.php',
-        'JakubOnderka\\PhpParallelLint\\Result' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Result.php',
-        'JakubOnderka\\PhpParallelLint\\RunTimeException' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/exceptions.php',
-        'JakubOnderka\\PhpParallelLint\\Settings' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Settings.php',
-        'JakubOnderka\\PhpParallelLint\\SyntaxError' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Error.php',
-        'JakubOnderka\\PhpParallelLint\\TextOutput' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Output.php',
-        'JakubOnderka\\PhpParallelLint\\TextOutputColored' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Output.php',
-        'JsonSerializable' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/polyfill.php',
-        'WP_CLI' => __DIR__ . '/..' . '/wp-cli/wp-cli/php/class-wp-cli.php',
-        'WP_CLI_Command' => __DIR__ . '/..' . '/wp-cli/wp-cli/php/class-wp-cli-command.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit8de789a2c20183752e72c14c93a923cf::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit8de789a2c20183752e72c14c93a923cf::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit8de789a2c20183752e72c14c93a923cf::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit8de789a2c20183752e72c14c93a923cf::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitf2ea575c781832c7edba4dca79d6cafd::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitf2ea575c781832c7edba4dca79d6cafd::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitf2ea575c781832c7edba4dca79d6cafd::$classMap;
 
         }, null, ClassLoader::class);
     }
