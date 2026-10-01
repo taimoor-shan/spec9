@@ -711,7 +711,11 @@ function spec9_seed_mods( $media, $form_id ) {
 		'spec9_logo_dark'              => isset( $media['logo-dark'] ) ? $media['logo-dark'] : '',
 		'spec9_contact_phone'          => '(321) 555-0100',
 		'spec9_contact_email'          => 'info@spec9.com',
-		'spec9_contact_address'        => "Melbourne, Florida\nServing Brevard, Orange and the surrounding counties",
+		// The static site's footer shows this one line; the placeholder that
+		// stood here carried a second line the static never had, which wrapped
+		// into three lines in the footer's 264px column and made the whole
+		// footer 16px taller than the design.
+		'spec9_contact_address'        => 'Melbourne, Florida',
 		'spec9_cta_heading'            => 'Planning a commercial flooring project?',
 		'spec9_cta_bg'                 => isset( $media['cta'] ) ? $media['cta'] : '',
 		'spec9_cta_btn1_text'          => 'Request a Quote',

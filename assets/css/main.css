@@ -1177,6 +1177,24 @@ html.modal-open {
 }
 
 
+/* --- Logos in the header and footer -------------------------
+   wp_get_attachment_image() emits width/height attributes for
+   CLS. Those are presentational hints: as author styles go,
+   `height: 44px` wins over the height attribute in both places,
+   but nothing sets `width`, so the hint's width survives. The
+   header logo laid out at its full 2079px — pushing the nav and
+   the CTA off-screen and giving the page a horizontal scrollbar
+   — and the footer logo forced its 1.6fr grid column to 1013px,
+   squeezing the other three and overflowing the page. The static
+   markup carries no width attribute, so it sizes both logos from
+   the intrinsic ratio. Restoring `width: auto` reproduces that
+   exactly (~122px), and lets srcset pick a small candidate. */
+header img,
+footer img {
+    width: auto
+}
+
+
 /* --- Legal bar ---------------------------------------------
    The static markup grouped both links in one span, so the
    flex row has two children and stays flush right. */
