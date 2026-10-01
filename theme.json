@@ -1,0 +1,82 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"settings": {
+		"appearanceTools": false,
+		"useRootPaddingAwareAlignments": false,
+		"layout": {
+			"contentSize": "760px",
+			"wideSize": "1240px"
+		},
+		"color": {
+			"custom": false,
+			"customDuotone": false,
+			"customGradient": false,
+			"defaultDuotone": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
+			"palette": [
+				{ "slug": "bg", "name": "Background", "color": "#ffffff" },
+				{ "slug": "warm", "name": "Warm surface", "color": "#f5f3ef" },
+				{ "slug": "ink", "name": "Ink", "color": "#1f2124" },
+				{ "slug": "mute", "name": "Muted text", "color": "#6f6c67" },
+				{ "slug": "line", "name": "Hairline", "color": "#dedad3" },
+				{ "slug": "red", "name": "Brand red", "color": "#ed2118" },
+				{ "slug": "dk", "name": "Dark surface", "color": "#1b1c1f" },
+				{ "slug": "dkt", "name": "Dark surface text", "color": "#f2f0ec" }
+			]
+		},
+		"typography": {
+			"customFontSize": false,
+			"defaultFontSizes": false,
+			"fontFamilies": [
+				{
+					"slug": "barlow",
+					"name": "Barlow",
+					"fontFamily": "Barlow, system-ui, sans-serif"
+				},
+				{
+					"slug": "barlow-condensed",
+					"name": "Barlow Condensed",
+					"fontFamily": "\"Barlow Condensed\", Impact, sans-serif"
+				}
+			],
+			"fontSizes": [
+				{ "slug": "small", "name": "Small", "size": "16px" },
+				{ "slug": "medium", "name": "Medium", "size": "17px" },
+				{ "slug": "large", "name": "Large", "size": "21px" },
+				{ "slug": "x-large", "name": "Extra large", "size": "30px" },
+				{
+					"slug": "h2",
+					"name": "Section heading",
+					"size": "60px",
+					"fluid": { "min": "38px", "max": "60px" }
+				},
+				{
+					"slug": "hero",
+					"name": "Hero heading",
+					"size": "100px",
+					"fluid": { "min": "56px", "max": "100px" }
+				}
+			]
+		},
+		"spacing": {
+			"units": [ "px" ],
+			"spacingSizes": [
+				{ "slug": "section", "name": "Section padding", "size": "112px" },
+				{ "slug": "card-gap", "name": "Card gap", "size": "28px" }
+			]
+		}
+	},
+	"styles": {
+		"elements": {
+			"button": {
+				"color": { "background": "transparent", "text": "currentColor" },
+				"border": { "radius": "0", "width": "0", "style": "none" },
+				"spacing": {
+					"padding": { "top": "0", "right": "0", "bottom": "0", "left": "0" }
+				}
+			}
+		}
+	}
+}
