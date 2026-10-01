@@ -325,9 +325,9 @@ function spec9_svg_is_safe( $contents ) {
 		'/<video/i',
 		'/<image/i',
 		'/<animate/i',
-		'/<set[\s>/]/i',
+		'/<set[\s>\/]/i',
 		'/<handler/i',
-		'/<a[\s>/]/i',
+		'/<a[\s>\/]/i',
 		'/<!entity/i',
 		'/<!doctype[^>]*\[/i',
 		'/\son[a-z]+\s*=/i',
@@ -390,11 +390,18 @@ add_filter( 'wp_check_filetype_and_ext', 'spec9_fix_svg_filetype', 10, 4 );
 /**
  * Reject SVG uploads that contain scripts or external references.
  *
+ * Hooked to the upload and the sideload filter both, so every route into the
+ * media library — wp-cli's media import included — is checked the same way.
+ *
  * @param array $file Uploaded file data.
  * @return array
  */
 function spec9_svg_upload_prefilter( $file ) {
-	if ( empty( $file['type'] ) || 'image/svg+xml' !== $file['type'] ) {
+	$name   = isset( $file['name'] ) ? (string) $file['name'] : '';
+	$is_svg = ( isset( $file['type'] ) && 'image/svg+xml' === $file['type'] )
+		|| 'svg' === strtolower( pathinfo( $name, PATHINFO_EXTENSION ) );
+
+	if ( ! $is_svg ) {
 		return $file;
 	}
 
@@ -413,6 +420,7 @@ function spec9_svg_upload_prefilter( $file ) {
 	return $file;
 }
 add_filter( 'wp_handle_upload_prefilter', 'spec9_svg_upload_prefilter' );
+add_filter( 'wp_handle_sideload_prefilter', 'spec9_svg_upload_prefilter' );
 
 /**
  * Print an SVG attachment inline.
@@ -442,6 +450,13 @@ function spec9_inline_svg( $attachment_id, $class = '' ) {
 
 	if ( false === $svg ) {
 		return '';
+	}
+
+	// A file that fails the upload scan is never inlined, no matter which route
+	// it took into the library; an <img> renders it in the browser's own
+	// restricted SVG context instead.
+	if ( ! spec9_svg_is_safe( $svg ) ) {
+		return wp_get_attachment_image( $attachment_id, 'medium' );
 	}
 
 	// wp_kses strips the prolog and doctype anyway; removing them first keeps
