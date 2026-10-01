@@ -997,7 +997,13 @@ html.modal-open {
 
 .hero .wp-block-button__link,
 .wp-block-button.is-style-primary .wp-block-button__link,
-.wp-block-button.is-style-ghost .wp-block-button__link {
+.wp-block-button.is-style-ghost .wp-block-button__link,
+/* A button block with no style class. theme.json neutralises core's
+   element button styles, so without this an author's default button
+   renders as bare text. The :not() also keeps this rule away from
+   core's own is-style-outline, which would otherwise lose its
+   padding and border to these declarations. */
+.wp-block-button:where(:not([class*="is-style-"])) .wp-block-button__link {
     display: inline-block;
     padding: 15px 28px;
     font-weight: 500;
