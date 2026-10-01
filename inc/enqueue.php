@@ -55,9 +55,9 @@ function spec9_scripts() {
 		null // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion -- Google Fonts URL is versioned by the vendor.
 	);
 
+	// style.css carries the theme header and no rules, so it is never enqueued.
 	wp_enqueue_style( 'spec9-tokens', get_template_directory_uri() . '/assets/css/tokens.css', array(), spec9_asset_version( 'assets/css/tokens.css' ) );
 	wp_enqueue_style( 'spec9-main', get_template_directory_uri() . '/assets/css/main.css', array( 'spec9-tokens' ), spec9_asset_version( 'assets/css/main.css' ) );
-	wp_enqueue_style( 'spec9-style', get_stylesheet_uri(), array( 'spec9-main' ), spec9_asset_version( 'style.css' ) );
 
 	wp_enqueue_script(
 		'spec9-main',

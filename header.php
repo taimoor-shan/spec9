@@ -1,59 +1,57 @@
 <?php
 /**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ * Header: document head, body tag and the sticky site header.
  *
  * @package Spec9
  */
 
-?>
-<!doctype html>
+$spec9_logo_light = (int) get_theme_mod( 'custom_logo' );
+$spec9_logo_dark  = (int) get_theme_mod( 'spec9_logo_dark' );
+
+// A site that only has one logo still needs something to show in dark mode.
+if ( ! $spec9_logo_dark ) {
+	$spec9_logo_dark = $spec9_logo_light;
+}
+$spec9_home_url = home_url( '/' );
+?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
-
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'spec9' ); ?></a>
-
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+<header>
+	<div class="w">
+		<?php if ( $spec9_logo_light ) : ?>
+			<a href="<?php echo esc_url( $spec9_home_url ); ?>">
 				<?php
-			else :
+				echo spec9_logo_img( 'header-logo-light', $spec9_logo_light, true ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- wp_get_attachment_image() escapes its own attributes.
+				echo spec9_logo_img( 'header-logo-dark', $spec9_logo_dark, true ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Same as above.
 				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$spec9_description = get_bloginfo( 'description', 'display' );
-			if ( $spec9_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $spec9_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+			</a>
+		<?php else : ?>
+			<a href="<?php echo esc_url( $spec9_home_url ); ?>"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a>
+		<?php endif; ?>
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'spec9' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+		<?php
+		wp_nav_menu(
+			array(
+				'theme_location' => 'primary',
+				'container'      => false,
+				'items_wrap'     => '<nav>%3$s</nav>',
+				'fallback_cb'    => false,
+				'depth'          => 1,
+				'walker'         => new Spec9_Bare_Walker(),
+			)
+		);
+		?>
+
+		<div class="h-actions">
+			<button class="theme-toggle" type="button" id="theme-toggle" aria-pressed="false" aria-label="<?php esc_attr_e( 'Switch to dark mode', 'spec9' ); ?>" title="<?php esc_attr_e( 'Switch dark / light', 'spec9' ); ?>"><span class="icon-moon" aria-hidden="true">☾</span><span class="icon-sun" aria-hidden="true">☀</span></button>
+			<a class="btn p" href="#quote"><?php esc_html_e( 'Get a Quote', 'spec9' ); ?></a>
+		</div>
+	</div>
+</header>

@@ -133,6 +133,40 @@ function spec9_bg_img_style( $attachment_id ) {
 }
 
 /**
+ * Build the markup for one site logo image.
+ *
+ * The header swaps between a light and a dark variant with CSS, so it needs
+ * two plain <img> tags it can class. get_custom_logo() prints its own anchor
+ * and classes and knows nothing about the dark variant, hence this.
+ *
+ * @param string $class CSS class for the image; omitted when empty.
+ * @param int    $id    Attachment ID. 0 renders nothing.
+ * @param bool   $eager Whether to load eagerly instead of lazily.
+ * @return string
+ */
+function spec9_logo_img( $class, $id, $eager = false ) {
+	$id = (int) $id;
+
+	if ( ! $id ) {
+		return '';
+	}
+
+	$attr = array(
+		'alt' => get_bloginfo( 'name' ),
+	);
+
+	if ( $class ) {
+		$attr['class'] = $class;
+	}
+
+	if ( $eager ) {
+		$attr['loading'] = 'eager';
+	}
+
+	return wp_get_attachment_image( $id, 'full', false, $attr );
+}
+
+/**
  * Elements and attributes allowed in an uploaded SVG.
  *
  * Attribute names are lowercase because that is how the HTML parser and

@@ -1,57 +1,100 @@
 <?php
 /**
- * The main template file
+ * Fallback template.
  *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * Serves the service and project archives, and anything without a template
+ * of its own — search results, categories, dates. The archives lead to the
+ * single pages, which is how a visitor reaches them: the cards on the front
+ * page open the quote modal instead.
  *
  * @package Spec9
  */
 
 get_header();
-?>
 
-	<main id="primary" class="site-main">
+$spec9_archive = '';
 
-		<?php
-		if ( have_posts() ) :
+if ( is_post_type_archive( 'service' ) ) {
+	$spec9_archive = 'service';
+} elseif ( is_post_type_archive( 'project' ) ) {
+	$spec9_archive = 'project';
+}
 
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
+if ( 'service' === $spec9_archive ) {
+	$spec9_link_text = carbon_get_post_meta( (int) get_option( 'page_on_front' ), 'services_card_link_text' );
+
+	if ( ! $spec9_link_text ) {
+		$spec9_link_text = __( 'Request pricing', 'spec9' );
+	}
+}
+
+if ( $spec9_archive ) :
+	?>
+	<section class="sec">
+		<div class="w">
+			<?php
+			get_template_part(
+				'template-parts/section-head',
+				null,
+				array( 'heading' => get_the_archive_title() )
+			);
+			?>
+			<div class="<?php echo 'service' === $spec9_archive ? 'svc' : 'gal'; ?>">
 				<?php
-			endif;
+				$spec9_mods = 'service' === $spec9_archive ? array( '', ' b', ' c' ) : array( 'c2', 'd', 'e' );
+				$spec9_i    = 0;
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+				while ( have_posts() ) :
+					the_post();
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+					$spec9_args = array( 'ph_mod' => $spec9_mods[ $spec9_i % count( $spec9_mods ) ] );
 
-			endwhile;
+					if ( 'service' === $spec9_archive ) {
+						$spec9_args['link_text'] = $spec9_link_text;
+					}
 
-			the_posts_navigation();
+					get_template_part( 'template-parts/card-' . $spec9_archive, null, $spec9_args );
 
-		else :
+					++$spec9_i;
+				endwhile;
+				?>
+			</div>
+			<?php the_posts_pagination(); ?>
+		</div>
+	</section>
+	<?php
+else :
+	?>
+	<section class="sec">
+		<div class="w entry-content">
+			<?php if ( is_search() ) : ?>
+				<h1><?php printf( esc_html__( 'Search results for “%s”', 'spec9' ), esc_html( get_search_query() ) ); ?></h1>
+			<?php elseif ( is_archive() || is_home() ) : ?>
+				<h1><?php echo wp_kses_post( get_the_archive_title() ); ?></h1>
+			<?php else : ?>
+				<h1><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h1>
+			<?php endif; ?>
 
-			get_template_part( 'template-parts/content', 'none' );
+			<?php if ( have_posts() ) : ?>
+				<?php
+				while ( have_posts() ) :
+					the_post();
+					?>
+					<article>
+						<h2><a href="<?php the_permalink(); ?>"><?php echo esc_html( get_the_title() ); ?></a></h2>
+						<p><?php echo esc_html( get_the_excerpt() ); ?></p>
+					</article>
+					<?php
+				endwhile;
+				?>
 
-		endif;
-		?>
+				<?php the_posts_pagination(); ?>
+			<?php else : ?>
+				<p><?php esc_html_e( 'Nothing found here.', 'spec9' ); ?></p>
+			<?php endif; ?>
+		</div>
+	</section>
+	<?php
+endif;
 
-	</main><!-- #main -->
-
-<?php
-get_sidebar();
 get_footer();
